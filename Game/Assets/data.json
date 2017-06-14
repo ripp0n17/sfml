@@ -1,0 +1,72 @@
+{
+    "textures":
+    [
+        {
+            "name": "player",
+            "path": "Assets/Player.png"
+        },
+        {
+            "name": "tilesheet",
+            "path": "Assets/Tilesheet.png"
+        }
+    ],
+    "entities":
+    [
+        {
+            "type": "player",
+            "texture_name": "player",
+            "size_x": 567.0,
+            "size_y": 556.0,
+            "pos_x": 0.0,
+            "pos_y": 0.0,
+            "scale": 0.25,
+            "acceleration": 7.0,
+            "run_speed": 150.0,
+            "jump_power": 200.0,
+            "default_animation": "idle",
+            "animations":
+            [
+                {
+                    "name": "idle",
+                    "frame_count": 10,
+                    "start_x": 0.0,
+                    "start_y": 0.0,
+                    "speed": 60
+                },
+                {
+                    "name": "run",
+                    "frame_count": 8,
+                    "start_x": 0.0,
+                    "start_y": 556.0,
+                    "speed": 60
+                }
+            ]
+        }
+    ],
+    "map" :
+    {
+        "tile_models":
+        [
+            {
+                "name": "grass",
+                "model":
+                {
+                    "texture_name": "tilesheet",
+                    "tile_size": 32,
+                    "pos_x": 64,
+                    "pos_y": 32
+                }
+            }
+        ],
+        "tiles":
+        [
+            {
+                "tile_model_name": "grass",
+                "column": 2,
+                "row": 2,
+                "size": 32,
+                "is_solid": true
+            }
+        ]
+    }
+}
