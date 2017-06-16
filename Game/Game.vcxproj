@@ -141,10 +141,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="Debug\Game.log" />
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="json\json-forwards.h" />
     <ClInclude Include="json\json.h" />
     <ClInclude Include="stdafx.h" />
@@ -164,32 +160,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\data.json" />
-    <None Include="Debug\Game.pch" />
-    <None Include="Debug\Game.tlog\CL.command.1.tlog" />
-    <None Include="Debug\Game.tlog\CL.read.1.tlog" />
-    <None Include="Debug\Game.tlog\CL.write.1.tlog" />
-    <None Include="Debug\Game.tlog\Game.lastbuildstate" />
-    <None Include="Debug\Game.tlog\link.command.1.tlog" />
-    <None Include="Debug\Game.tlog\link.read.1.tlog" />
-    <None Include="Debug\Game.tlog\link.write.1.tlog" />
-    <None Include="Debug\Game.tlog\unsuccessfulbuild" />
-    <None Include="Debug\vc141.idb" />
-    <None Include="Debug\vc141.pdb" />
-    <None Include="openal32.dll" />
-    <None Include="sfml-audio-2.dll" />
-    <None Include="sfml-audio-d-2.dll" />
-    <None Include="sfml-graphics-2.dll" />
-    <None Include="sfml-graphics-d-2.dll" />
-    <None Include="sfml-network-2.dll" />
-    <None Include="sfml-network-d-2.dll" />
-    <None Include="sfml-system-2.dll" />
-    <None Include="sfml-system-d-2.dll" />
-    <None Include="sfml-window-2.dll" />
-    <None Include="sfml-window-d-2.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="Debug\Game.obj" />
-    <Object Include="Debug\stdafx.obj" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Player.png" />

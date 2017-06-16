@@ -94,6 +94,11 @@ public:
 	explicit Entity() {}
 	virtual ~Entity() {}
 
+	sf::FloatRect getBoundingRect() const
+	{
+		return m_sprite.getGlobalBounds();
+	}
+
 	virtual void deserialise(TextureManager& textures, const Json::Value& data)
 	{
 		auto texture_name = data.get("texture_name", "").asString();
@@ -110,7 +115,7 @@ public:
 		m_sprite.setScale(scale, scale);
 		m_sprite.setPosition(pos_x, pos_y);
 	}
-	
+
 	virtual void update(sf::Time dt)
 	{
 		m_sprite.move(m_velocity * dt.asSeconds());
@@ -119,13 +124,41 @@ public:
 	void draw(sf::RenderTarget &target, sf::RenderStates states) const override
 	{
 		target.draw(m_sprite);
+		target.draw(getDebugRect());
 	}
+
+	void handleCollision(Entity* entity, sf::FloatRect intersection)
+	{
+		if (entity->getBoundingRect().left == intersection.left)
+		{
+			m_sprite.move(0, -intersection.height * 2);
+			m_velocity.y = 0;
+		}
+		else if (entity->getBoundingRect().top == intersection.top)
+		{
+			m_sprite.move(-intersection.width * 2, 0);
+			m_velocity.x = 0;
+		}
+	}
+
 protected:
 	std::shared_ptr<sf::Texture> m_texture;
 	sf::Sprite m_sprite;
 
 	sf::Vector2f m_velocity;
 	sf::Vector2f m_size;
+
+	sf::RectangleShape getDebugRect() const
+	{
+		auto bounds = getBoundingRect();
+		sf::RectangleShape debug;
+		debug.setPosition(bounds.left, bounds.top);
+		debug.setSize(sf::Vector2f(bounds.width, bounds.height));
+		debug.setFillColor(sf::Color::Transparent);
+		debug.setOutlineColor(sf::Color::Red);
+		debug.setOutlineThickness(2.f);
+		return debug;
+	}
 };
 
 class AnimatedEntity : public Entity
@@ -232,16 +265,16 @@ public:
 		m_velocity.y += 0.75f;
 		if (m_velocity.x > 0) m_velocity.x -= 0.5f;
 		if (m_velocity.x < 0) m_velocity.x += 0.5f;
-		Entity::update(dt);
+		Entity::update(dt);/*
 
 		auto currentPos = m_sprite.getPosition();
-		if (currentPos.y > (600 - 139))
+		if (currentPos.y > (600 - 200))
 		{
-			m_sprite.setPosition(currentPos.x, (600 - 139));
+			m_sprite.setPosition(currentPos.x, (600 - 200));
 			m_velocity.y = 0;
-		}
+		}*/
 	}
-	
+
 private:
 	float m_acceleration;
 	float m_run_speed;
@@ -262,7 +295,7 @@ public:
 	TileModel()
 		: m_texture(nullptr)
 	{
-		
+
 	}
 	~TileModel() {}
 
@@ -296,13 +329,18 @@ using TileModelMap = std::unordered_map<std::string, std::shared_ptr<TileModel>>
 class Tile : public sf::Drawable
 {
 public:
-	Tile() 
+	Tile()
 		: m_model(nullptr)
 		, m_size(0)
-		, m_position(0,0)
-		, m_is_solid(false) 
+		, m_position(0, 0)
+		, m_is_solid(false)
 	{}
 	virtual ~Tile() {}
+
+	bool isSolid() const
+	{
+		return m_is_solid;
+	}
 
 	virtual void deserialise(TileModelMap& models, const Json::Value& data)
 	{
@@ -326,6 +364,11 @@ public:
 	{
 		m_model->setPosition(sf::Vector2f(m_position.x * m_size, m_position.y * m_size));
 		target.draw(*m_model);
+	}
+
+	sf::FloatRect getBoundingRect() const
+	{
+		return sf::FloatRect(m_size * m_position.x, m_size * m_position.y, m_size, m_size);
 	}
 
 private:
@@ -357,6 +400,21 @@ public:
 			Tile tile;
 			tile.deserialise(m_models, tiles[i]);
 			m_tiles.push_back(std::make_shared<Tile>(tile));
+		}
+	}
+
+	void checkCollisions(Entity& entity) const
+	{
+		for each (auto tile in m_tiles)
+		{
+			if (tile->isSolid())
+			{
+				sf::FloatRect intersection;
+				if (entity.getBoundingRect().intersects(tile->getBoundingRect(), intersection))
+				{
+					entity.handleCollision(&entity, intersection);
+				}
+			}
 		}
 	}
 
@@ -431,6 +489,8 @@ int main()
 
 		player.handleInput();
 		player.update(frameTime);
+
+		map.checkCollisions(player);
 
 		window.clear(sf::Color::Black);
 		window.draw(map);
