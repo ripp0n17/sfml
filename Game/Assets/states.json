@@ -1,0 +1,9 @@
+{
+  "states": [
+    {
+      "name": "menu",
+      "type": "MenuState",
+      "path": "Assets/menu.json"
+    }
+  ]
+}

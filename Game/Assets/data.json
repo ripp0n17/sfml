@@ -1,414 +1,410 @@
 {
-    "textures":
-    [
-        {
-            "name": "player",
-            "path": "Assets/Player.png"
-        },
-        {
-            "name": "tilesheet",
-            "path": "Assets/Tilesheet.png"
-        }
-    ],
-    "entities":
-    [
-        {
-            "type": "player",
-            "texture_name": "player",
-            "size_x": 567.0,
-            "size_y": 556.0,
-            "pos_x": 0.0,
-            "pos_y": 0.0,
-            "scale": 0.25,
-            "acceleration": 7.0,
-            "run_speed": 150.0,
-            "jump_power": 200.0,
-            "default_animation": "idle",
-            "animations":
-            [
-                {
-                    "name": "idle",
-                    "frame_count": 10,
-                    "start_x": 0.0,
-                    "start_y": 0.0,
-                    "speed": 60
-                },
-                {
-                    "name": "run",
-                    "frame_count": 8,
-                    "start_x": 0.0,
-                    "start_y": 556.0,
-                    "speed": 60
-                }
-            ]
-        }
-    ],
-    "map" :
+  "textures": [
     {
-        "tile_models":
-        [
-            {
-                "name": "grass",
-                "model":
-                {
-                    "texture_name": "tilesheet",
-                    "tile_size": 32,
-                    "pos_x": 64,
-                    "pos_y": 32
-                }
-            }
-        ],
-      "tiles": [
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 0,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 1,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 2,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 3,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 4,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 5,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 6,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 7,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 8,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 9,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 10,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 11,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 12,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 13,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 14,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 15,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 16,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 17,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 19,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 20,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 21,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 22,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 23,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 24,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 0,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 1,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 2,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 3,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 4,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 5,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 6,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 7,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 8,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 9,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 10,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 11,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 12,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 13,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 14,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 15,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 16,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 17,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 19,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 18,
-          "row": 20,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 20,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 21,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 22,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 23,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        },
-        {
-          "tile_model_name": "grass",
-          "column": 24,
-          "row": 18,
-          "size": 32,
-          "is_solid": true
-        }
-      ]
+      "name": "player",
+      "path": "Assets/Player.png"
+    },
+    {
+      "name": "tilesheet",
+      "path": "Assets/Tilesheet.png"
     }
+  ],
+  "entities": [
+    {
+      "type": "player",
+      "properties": {
+        "texture_name": "player",
+        "size_x": 567.0,
+        "size_y": 556.0,
+        "pos_x": 0.0,
+        "pos_y": 0.0,
+        "scale": 0.25,
+        "acceleration": 7.0,
+        "run_speed": 150.0,
+        "jump_power": 200.0,
+        "default_animation": "idle",
+        "animations": [
+          {
+            "name": "idle",
+            "frame_count": 10,
+            "start_x": 0.0,
+            "start_y": 0.0,
+            "speed": 60
+          },
+          {
+            "name": "run",
+            "frame_count": 8,
+            "start_x": 0.0,
+            "start_y": 556.0,
+            "speed": 60
+          }
+        ]
+      }
+    }
+  ],
+  "map": {
+    "tile_models": [
+      {
+        "name": "grass",
+        "model": {
+          "texture_name": "tilesheet",
+          "tile_size": 32,
+          "pos_x": 64,
+          "pos_y": 32
+        }
+      }
+    ],
+    "tiles": [
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 0,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 1,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 2,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 3,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 4,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 5,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 6,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 7,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 8,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 9,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 10,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 11,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 12,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 13,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 14,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 15,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 16,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 17,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 19,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 20,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 21,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 22,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 23,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 24,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 0,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 1,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 2,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 3,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 4,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 5,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 6,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 7,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 8,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 9,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 10,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 11,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 12,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 13,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 14,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 15,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 16,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 17,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 19,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 18,
+        "row": 20,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 20,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 21,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 22,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 23,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      },
+      {
+        "tile_model_name": "grass",
+        "column": 24,
+        "row": 18,
+        "size": 32,
+        "is_solid": true
+      }
+    ]
+  }
 }

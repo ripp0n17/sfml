@@ -1,0 +1,39 @@
+{
+  "textures": [
+    {
+      "name": "start_button",
+      "path": "Assets/uiStartButton.png"
+    },
+    {
+      "name": "background",
+      "path": "Assets/MenuBackground.jpg"
+    }
+  ],
+  "fonts": [
+    {
+      "name": "Arial",
+      "path": "Assets/Arial.ttf"
+    }
+  ],
+  "menu": {
+    "texture_name": "background",
+    "texture_x": 0,
+    "texture_y": 0,
+    "size_x": 800,
+    "size_y": 600,
+    "buttons": [
+      {
+        "pos_x_type": "auto",
+        "pos_x": "centre",
+        "pos_y_type": "position",
+        "pos_y": 200,
+        "size_x": 201,
+        "size_y": 71,
+        "texture_name": "start_button",
+        "texture_x": 0,
+        "texture_y": 0,
+        "action": "Test"
+      }
+    ]
+  }
+}
